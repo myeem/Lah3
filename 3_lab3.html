@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<script>
+var arr = []
+	for (let i=0; i<16; i++) {
+		arr[i] = Math.round(Math.random()*40)-10
+	}
+alert("Массив: " + arr)
+
+var kpol=0
+var kotr=0
+var knull=0
+var sumpol=0
+var sumotr=0
+for (let i=0; i<16; i++) {
+		if (arr[i]>0){
+			kpol=kpol+1
+			sumpol=sumpol+arr[i]
+		}
+		if (arr[i]<0){
+			kotr=kotr+1
+			sumotr=sumotr+arr[i]
+		}
+		if (arr[i]==0){
+			knull=knull+1
+		}
+}
+var arifm1=sumpol/kpol
+var arifm2=sumotr/kotr
+alert("Среднее арифметическое положительных: "+ arifm1)
+alert("Среднее арифметическое отрицательных: "+ arifm2)
+alert("Количество нулей: "+ knull)
+</script>
+</html>
